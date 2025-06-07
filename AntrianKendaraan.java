@@ -2,11 +2,15 @@ public class AntrianKendaraan {
     Node head;
     int jumlah = 0;
 
+        public boolean isEmpty() {
+        return head == null;
+    }
+
     public void tambahAntrian() {
         Kendaraan k = new Kendaraan();
         k.inputData();
         Node baru = new Node(k);
-        if (head == null) {
+        if (isEmpty()) {
             head = baru;
         } else {
             Node temp = head;
@@ -20,7 +24,7 @@ public class AntrianKendaraan {
     }
 
     public Kendaraan layani() {
-        if (head == null) return null;
+        if (isEmpty()) return null;
         Kendaraan dilayani = head.data;
         head = head.next;
         jumlah--;
@@ -28,7 +32,7 @@ public class AntrianKendaraan {
     }
 
     public void tampilAntrian() {
-        if (head == null) {
+        if (isEmpty()) {
             System.out.println(">> Tidak ada kendaraan dalam antrian.");
             return;
         }
@@ -36,6 +40,7 @@ public class AntrianKendaraan {
         Node temp = head;
         while (temp != null) {
             System.out.println(temp.data);
+            System.out.println("----------------------");
             temp = temp.next;
         }
     }
@@ -52,8 +57,13 @@ public class AntrianKendaraan {
         }
         System.out.println("Petugas melayani " + k.platNomor);
         Transaksi t = new Transaksi();
-        t.inputTransaksi(k.platNomor); 
+        t.inputTransaksi(k.platNomor);
         transaksiQueue.enqueue(t);
         System.out.println(">> Transaksi berhasil dicatat.");
+    }
+
+    public Kendaraan peek() {
+        if (isEmpty()) return null;
+        return head.data;
     }
 }
