@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Kendaraan {
@@ -18,4 +19,8 @@ public class Kendaraan {
     public String toString() {
         return "Plat Nomor: " + platNomor + "\nTipe: " + jenisKendaraan + "\nMerk: " + merk;
     }
+}
+
+public class Kendaraan{
+    
 }

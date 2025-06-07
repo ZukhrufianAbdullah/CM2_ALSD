@@ -10,4 +10,5 @@ public class BBM {
     public String toString() {
         return nama + " - Rp" + harga + "/L";
     }
+
 }
