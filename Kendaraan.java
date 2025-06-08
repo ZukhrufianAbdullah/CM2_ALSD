@@ -1,26 +1,25 @@
-
-import java.util.Scanner;
-
 public class Kendaraan {
-    String platNomor;
-    String jenisKendaraan;
+    String plat;
+    String tipe;
     String merk;
 
-    public void inputData() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Masukkan Plat Nomor: ");
-        platNomor = sc.nextLine();
-        System.out.print("Masukkan Jenis Kendaraan: ");
-        jenisKendaraan = sc.nextLine();
-        System.out.print("Masukkan Merk: ");
-        merk = sc.nextLine();
+    public Kendaraan(String plat, String tipe, String merk) {
+        this.plat = plat;
+        this.tipe = tipe;
+        this.merk = merk;
+    }
+
+    public void tampilkanInformasi() {
+        System.out.println("Plat Nomor: " + plat);
+        System.out.println("Tipe: " + tipe);
+        System.out.println("Merk: " + merk);
+    }
+
+    public String getPlat() {
+        return plat;
     }
 
     public String toString() {
-        return "Plat Nomor: " + platNomor + "\nTipe: " + jenisKendaraan + "\nMerk: " + merk;
+        return "Plat Nomor: " + plat + "\nTipe: " + tipe + "\nMerk: " + merk;
     }
-}
-
-public class Kendaraan{
-    
 }
