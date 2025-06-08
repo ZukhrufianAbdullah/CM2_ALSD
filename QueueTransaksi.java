@@ -1,9 +1,9 @@
 public class QueueTransaksi {
-    Transaksi[] data;
+    TransaksiPengisian[] data;
     int front, rear, size;
 
     public QueueTransaksi(int kapasitas) {
-        data = new Transaksi[kapasitas];
+        data = new TransaksiPengisian[kapasitas];
         front = rear = size = 0;
     }
 
@@ -15,7 +15,7 @@ public class QueueTransaksi {
         return size == data.length;
     }
 
-    public void enqueue(Transaksi t) {
+    public void enqueue(TransaksiPengisian t) {
         if (isFull()) {
             System.out.println(">> Antrian transaksi penuh!");
             return;
@@ -30,7 +30,7 @@ public class QueueTransaksi {
             System.out.println(">> Belum ada transaksi.");
             return;
         }
-        System.out.println("Riwayat Transaksi --");
+        System.out.println("--- Riwayat Transaksi --");
         System.out.println("Daftar Transaksi:");
         for (int i = 0; i < size; i++) {
             int idx = (front + i) % data.length;
