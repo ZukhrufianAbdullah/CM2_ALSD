@@ -1,13 +1,13 @@
 public class BBM {
-    String nama;
-    int harga;
+    String namaBBM;
+    double hargaPerLiter;
 
-    public BBM(String nama, int harga) {
-        this.nama = nama;
-        this.harga = harga;
+    public BBM(String namaBBM, double hargaPerLiter) {
+        this.namaBBM = namaBBM;
+        this.hargaPerLiter = hargaPerLiter;
     }
 
     public String toString() {
-        return nama + " - Rp" + harga + "/L";
+        return namaBBM + " - Rp" + hargaPerLiter + "/L";
     }
 }
